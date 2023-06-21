@@ -13,23 +13,11 @@ public class Main {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://novate.ru/"); // открыть страницу
-
-        WebElement input = driver.findElement(By.id("search")); // найти элемент по id: нашли инпут
-        input.sendKeys("интерьер"); // вписываем запрос
-        WebElement searchButton = driver.findElement(By.xpath("//*[@id=\"search-form\"]/input[2]")); // найти элемент по xpath: нашли кнопку
-        searchButton.click(); // кликнули на кнопку
-
-      //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // создаем неявное ожидание, т.е. общее ожидание
-
-        WebElement element = (new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"right\"]/h2[1]")))); // создаем явное ожидаине для конкретного случая
-        /* создаем вебдрайвер, который будет отвечать за ожидание, задаем ему несколько параметров: драйвер, передаем время, которое нужно подождать;
-        далее вызываем для драйвера метод, в нашем случае until: что мы ожидаем от нужного нам элемента? - Появился, пропал и тд.
-        Т.е. обращаемся к какому-л событию посредством ExpectedConditions. У данного класса есть различные методы: выбираем тот, который мы ожидаем.
-         */
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // создаем неявное ожидание, т.е. общее ожидание
 
 
-        driver.quit(); // закрыть браузер
+        driver.get("https://www.avito.ru/chelyabinsk/transport"); // открыть страницу
+
+
     }
 }
