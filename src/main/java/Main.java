@@ -20,7 +20,8 @@ public class Main {
 
         WebElement findElement = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[2]/div[1]/div[1]/ul/li/ul/li[1]/div/a"));
         // поиск элемента
-        String par = findElement.getAttribute("href"); // указываем какой аттрибут нам необходим, напр, ссылка
+        String par = findElement.getAttribute("href"); // указываем какой аттрибут нам необходим, напр, ссылка и забираем (get) инфу
+        // String par = findElement.getText(); // при необходимосты вывести текст
         System.out.println(par); // выводим инфу в консоль
     }
 }
