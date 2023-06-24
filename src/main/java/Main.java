@@ -18,6 +18,9 @@ public class Main {
 
         driver.get("https://www.avito.ru/chelyabinsk/transport"); // открыть страницу
 
-
+        WebElement findElement = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[3]/div/div[2]/div[2]/div[1]/div[1]/ul/li/ul/li[1]/div/a"));
+        // поиск элемента
+        String par = findElement.getAttribute("href"); // указываем какой аттрибут нам необходим, напр, ссылка
+        System.out.println(par); // выводим инфу в консоль
     }
 }
