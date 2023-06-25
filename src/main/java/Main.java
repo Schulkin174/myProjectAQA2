@@ -22,6 +22,7 @@ public class Main {
         // поиск элемента
         String par = findElement.getAttribute("href"); // указываем какой аттрибут нам необходим, напр, ссылка и забираем (get) инфу
         // String par = findElement.getText(); // при необходимосты вывести текст
+        // String par = findElement.getCssValue("display"); // пример для стилей css
         System.out.println(par); // выводим инфу в консоль
     }
 }
